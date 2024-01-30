@@ -19,19 +19,19 @@ function LoginZalo() {
   console.log(`Code Verifier: ${code_verifier}`);
   console.log(`Code Challenge: ${code_challenge}`);
 
-  //   useEffect(() => {
-  //     axios({
-  //       method: "post",
-  //       //   headers: {
-  //       //     "secret-key": "mDKuGtxwS188Vx1d2XVp",
-  //       //   },
-  //       url: `https://oauth.zaloapp.com/v4/permission?app_id=${app_id}&redirect_uri=${redirect_uri}&code_challenge=${code_challenge}&state=${state}`,
-  //     })
-  //       .then((dataA) => {
-  //         console.log(dataA);
-  //       })
-  //       .catch((error) => console.log(error));
-  //   });
+  useEffect(() => {
+    axios({
+      method: "post",
+      //   headers: {
+      //     "secret-key": "mDKuGtxwS188Vx1d2XVp",
+      //   },
+      url: `https://oauth.zaloapp.com/v4/permission?app_id=${app_id}&redirect_uri=${redirect_uri}&code_challenge=${code_challenge}&state=${state}`,
+    })
+      .then((dataA) => {
+        console.log(dataA);
+      })
+      .catch((error) => console.log(error));
+  });
 
   return <>zalo</>;
 }

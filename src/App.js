@@ -11,7 +11,7 @@ function App() {
       <div className="mx-auto w-1/2 text-center space-y-20 m-20">
         <LoginGg />
         <LoginFb />
-        {/* <LoginZalo /> */}
+        <LoginZalo />
       </div>
     </div>
   );
