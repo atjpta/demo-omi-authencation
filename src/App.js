@@ -3,6 +3,7 @@ import firebaseConfig from "./firebase.config";
 import LoginFb from "./components/login-fb";
 import LoginGg from "./components/login-gg";
 import LoginZalo from "./components/login-zl";
+import LoginConnectWallet from "./components/login-connet-wallet";
 initializeApp(firebaseConfig);
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <LoginGg />
         <LoginFb />
         <LoginZalo />
+        <LoginConnectWallet />
       </div>
     </div>
   );
