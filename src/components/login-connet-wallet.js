@@ -8,7 +8,7 @@ function LoginConnectWallet() {
   let message = "";
 
   const nonceTemp =
-    "Sign this message to confirm you own this wallet address. This action will not cost any gas fees.\n\nNonce: {nonce}";
+    "Sign this message to confirm you own this wallet address. This action will not cost any gas fees.\n\nMessage: {randomMessage}";
 
   const login = async () => {
     console.log("login ... ");
@@ -27,7 +27,7 @@ function LoginConnectWallet() {
 
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const message = nonceTemp.replace("{nonce}", nonce);
+      const message = nonceTemp.replace("{randomMessage}", nonce);
       const signatureRes = await provider.getSigner().signMessage(message);
       setSignature(signatureRes);
       setAddress(await provider.getSigner().getAddress());
